@@ -1,0 +1,949 @@
+jack of all trade@jackofalltrade MINGW64 ~ (master)
+$ cd '/d/6th Semester/Software Engineering/PA'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA
+$ pwd
+/d/6th Semester/Software Engineering/PA
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA
+$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA
+$ git init
+Initialized empty Git repository in D:/6th Semester/Software Engineering/PA/.git                           /
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ get status
+bash: get: command not found
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AllMyCommands.txt
+        Sprint0_25920.pdf
+        section3.1.txt
+        section5.1.txt
+        secton1.1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git add section1.1.txt
+fatal: pathspec 'section1.1.txt' did not match any files
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git add section1.1.txt
+fatal: pathspec 'section1.1.txt' did not match any files
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git add secton1.1.txt
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   secton1.1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AllMyCommands.txt
+        Sprint0_25920.pdf
+        section3.1.txt
+        section5.1.txt
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git add '*.txt'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   AllMyCommands.txt
+        new file:   section3.1.txt
+        new file:   section5.1.txt
+        new file:   secton1.1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Sprint0_25920.pdf
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git reset ^C
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git reset AllMyCommands.txt
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   section3.1.txt
+        new file:   section5.1.txt
+        new file:   secton1.1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AllMyCommands.txt
+        Sprint0_25920.pdf
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git rm --cached section3.1.txt
+rm 'section3.1.txt'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   section5.1.txt
+        new file:   secton1.1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AllMyCommands.txt
+        Sprint0_25920.pdf
+        section3.1.txt
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git reset section3.1.txt
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   section5.1.txt
+        new file:   secton1.1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AllMyCommands.txt
+        Sprint0_25920.pdf
+        section3.1.txt
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git checkout section3.1.txt
+error: pathspec 'section3.1.txt' did not match any file(s) known to git.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git checkout --section3.1.txt
+error: unknown option `section3.1.txt'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given                            ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA                            (master)
+$ git reset HEAD@{1}
+fatal: ambiguous argument 'HEAD@{1}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git reflog
+fatal: your current branch 'master' does not have any commits yet
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   section5.1.txt
+        new file:   secton1.1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AllMyCommands.txt
+        Sprint0_25920.pdf
+        section3.1.txt
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git rm --cached section3.1.txt
+fatal: pathspec 'section3.1.txt' did not match any files
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git rm section3.1.txt
+fatal: pathspec 'section3.1.txt' did not match any files
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git checkout section3.1.txt
+error: pathspec 'section3.1.txt' did not match any file(s) known to git.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git checkout --section3.1.txt
+error: unknown option `section3.1.txt'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git revert section3.1.txt
+fatal: bad revision 'section3.1.txt'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   section5.1.txt
+        new file:   secton1.1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AllMyCommands.txt
+        Sprint0_25920.pdf
+        section3.1.txt
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git revert HEAD~1
+fatal: bad revision 'HEAD~1'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git rever --abort
+git: 'rever' is not a git command. See 'git --help'.
+
+The most similar command is
+        revert
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git revert --abort
+error: no cherry-pick or revert in progress
+fatal: revert failed
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git revert --abort section3.1.txt
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add Signed-off-by:
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git add section3.1.txt
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   section3.1.txt
+        new file:   section5.1.txt
+        new file:   secton1.1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AllMyCommands.txt
+        Sprint0_25920.pdf
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git reset HEAD section3.1.txt
+fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git reset section3.1.txt
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   section5.1.txt
+        new file:   secton1.1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AllMyCommands.txt
+        Sprint0_25920.pdf
+        section3.1.txt
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git chechout section3.1.txt
+git: 'chechout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git checkout section3.1.txt
+error: pathspec 'section3.1.txt' did not match any file(s) known to git.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git checkout --section3.1.txt
+error: unknown option `section3.1.txt'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git checkout -- section3.1.txt
+error: pathspec 'section3.1.txt' did not match any file(s) known to git.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git add section3.1.txt
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   section3.1.txt
+        new file:   section5.1.txt
+        new file:   secton1.1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        AllMyCommands.txt
+        Sprint0_25920.pdf
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git commit
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'jack of all trade@jackofalltrade.(none)')
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git remote
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git remote -v
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git remote add origin https://github.com/reemessam/repo1.git
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git commit
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'jack of all trade@jackofalltrade.(none)')
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git commit -m"Adding 3 files"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'jack of all trade@jackofalltrade.(none)')
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git clone https://github.com/reemessam/repo1.git
+Cloning into 'repo1'...
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ ls
+AllMyCommands.txt  repo1/  section3.1.txt  section5.1.txt  secton1.1.txt  Sprint0_25920.pdf
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ cd repo1
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ ls
+README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git commit -m"Adding 3 files"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'jack of all trade@jackofalltrade.(none)')
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git config --global user.email "reem.essam@gmail.com"
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git config --global user.name "reem"
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git commit
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ cd '/d/6th Semester/Software Engineering/PA'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git commit -m'Adding 3 files'
+[master (root-commit) ef37002] Adding 3 files
+ 3 files changed, 187 insertions(+)
+ create mode 100644 section3.1.txt
+ create mode 100644 section5.1.txt
+ create mode 100644 secton1.1.txt
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git push --set-upstream origin master
+To https://github.com/reemessam/repo1.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/reemessam/repo1.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git log
+commit ef37002c559cf272545cef5ec7faeee6b64345be (HEAD -> master)
+Author: reem <reem.essam@gmail.com>
+Date:   Sun Feb 11 19:33:35 2018 +0200
+
+    Adding 3 files
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git push origin master
+To https://github.com/reemessam/repo1.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/reemessam/repo1.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git push --help
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git fetch origin-push
+fatal: 'origin-push' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git push --set-upstream origin madter
+error: src refspec madter does not match any.
+error: failed to push some refs to 'https://github.com/reemessam/repo1.git'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git push --set-upstream origin master
+To https://github.com/reemessam/repo1.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/reemessam/repo1.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git pull
+warning: no common commits
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+From https://github.com/reemessam/repo1
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git push --set-upstream origin master
+
+To https://github.com/reemessam/repo1.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/reemessam/repo1.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ git clone --mirror  https://github.com/reemessam/repo1.git
+Cloning into bare repository 'repo1.git'...
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ ls
+AllMyCommands.txt  repo1/  repo1.git/  section3.1.txt  section5.1.txt  secton1.1.txt  Sprint0_25920.pdf
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA (master)
+$ cd repo1
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ ls
+README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git push
+Everything up-to-date
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git log
+commit 0e1f85e221355f642f9587fca6c29418b1d7d8aa (HEAD -> master, origin/master, origin/HEAD)
+Author: reemessam <36365711+reemessam@users.noreply.github.com>
+Date:   Sun Feb 11 16:09:04 2018 +0200
+
+    Delete section 1.1
+
+commit 3752c3856f795d034e7491c44fdca292ab0003c2
+Author: reemessam <36365711+reemessam@users.noreply.github.com>
+Date:   Sun Feb 11 15:54:31 2018 +0200
+
+    create section 1.1
+
+    Getting Started - About Version Control from
+    book
+
+commit e2eb066263fd85f3cca6315fd0412d1a88ab8351
+Author: reemessam <36365711+reemessam@users.noreply.github.com>
+Date:   Sun Feb 11 15:35:15 2018 +0200
+
+    Initial commit
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git add section1.1.txt
+fatal: pathspec 'section1.1.txt' did not match any files
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        section3.1.txt
+        section5.1.txt
+        secton1.1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git add "*.txt"
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   section3.1.txt
+        new file:   section5.1.txt
+        new file:   secton1.1.txt
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git rm --cached section3.1.txt
+rm 'section3.1.txt'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   section5.1.txt
+        new file:   secton1.1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        section3.1.txt
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git add section3.1.txt
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   section3.1.txt
+        new file:   section5.1.txt
+        new file:   secton1.1.txt
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git commit -m'Adding 3 files'
+[master e031866] Adding 3 files
+ 3 files changed, 187 insertions(+)
+ create mode 100644 section3.1.txt
+ create mode 100644 section5.1.txt
+ create mode 100644 secton1.1.txt
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git push
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 8.07 KiB | 8.07 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/reemessam/repo1.git
+   0e1f85e..e031866  master -> master
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git branch
+* master
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git checkout -b ReadMe
+Switched to a new branch 'ReadMe'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git branch
+* ReadMe
+  master
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git add README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git status
+On branch ReadMe
+nothing to commit, working tree clean
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git reset README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git init
+Reinitialized existing Git repository in D:/6th Semester/Software Engineering/PA/repo1/.git/
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git branch
+* ReadMe
+  master
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git add README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git status
+On branch ReadMe
+nothing to commit, working tree clean
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git commit -m'Adding README file'
+On branch ReadMe
+nothing to commit, working tree clean
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git push
+fatal: The current branch ReadMe has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ReadMe
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git push --set-upstream origin ReadMe
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/reemessam/repo1.git
+ * [new branch]      ReadMe -> ReadMe
+Branch 'ReadMe' set up to track remote branch 'ReadMe' from 'origin'.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git push
+Everything up-to-date
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git add README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git commit
+Aborting commit due to empty commit message.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git commit -m'Adding README file'
+[ReadMe 8dcf970] Adding README file
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 502 bytes | 502.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/reemessam/repo1.git
+   e031866..8dcf970  ReadMe -> ReadMe
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git branch
+  ReadMe
+* master
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git merge ReadMe
+Updating e031866..8dcf970
+Fast-forward
+ README.md | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git branch
+  ReadMe
+* master
+
