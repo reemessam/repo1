@@ -843,8 +843,98 @@ $ git branch
 * master
 
 jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ touch README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (m                                                                                   aster)
+$ echo "Project Title (sprint0)" > README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (m                                                                                   aster)
+$ echo "Getting Started (3 files containing sections from the book)"> README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (m                                                                                   aster)
+$ echo "Author (Reem Essam 37-8875)" > README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (m                                                                                   aster)
+$ echo "Acknowledgments (book Chacon , Scott , and Ben Straub. Pro Git.Apree)"> README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (m                                                                                   aster)
+$ git show : README.md
+fatal: ambiguous argument ':': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git cat-file README.md
+usage: git cat-file (-t [--allow-unknown-type] | -s [--allow-unknown-type] | -e | -p | <type> | --textco                                                                    nv | --filters) [--path=<path>] <object>
+   or: git cat-file (--batch | --batch-check) [--follow-symlinks] [--textconv | --filters]
+
+<type> can be one of: blob, tree, commit, tag
+    -t                    show object type
+    -s                    show object size
+    -e                    exit with zero when there's no error
+    -p                    pretty-print object's content
+    --textconv            for blob objects, run textconv on object's content
+    --filters             for blob objects, run filters on object's content
+    --path <blob>         use a specific path for --textconv/--filters
+    --allow-unknown-type  allow -s and -t to work with broken/corrupt objects
+    --buffer              buffer --batch output
+    --batch[=<format>]    show info and content of objects fed from the standard input
+    --batch-check[=<format>]
+                          show info about objects fed from the standard input
+    --follow-symlinks     follow in-tree symlinks (used with --batch or --batch-check)
+    --batch-all-objects   show all objects with --batch or --batch-check
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git branch -b ReadMe
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged | --no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track           set up tracking mode (see git-pull(1))
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      Unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display SHA-1s
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    --list                list branch names
+    -l, --create-reflog   create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
 $ git checkout -b ReadMe
 Switched to a new branch 'ReadMe'
+M       README.md
 
 jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
 $ git branch
@@ -853,77 +943,13 @@ $ git branch
 
 jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
 $ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
 
 jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git status
-On branch ReadMe
-nothing to commit, working tree clean
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git reset README.md
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git init
-Reinitialized existing Git repository in D:/6th Semester/Software Engineering/PA/repo1/.git/
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git branch
-* ReadMe
-  master
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git add README.md
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git status
-On branch ReadMe
-nothing to commit, working tree clean
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git commit -m'Adding README file'
-On branch ReadMe
-nothing to commit, working tree clean
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git push
-fatal: The current branch ReadMe has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream origin ReadMe
-
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git push --set-upstream origin ReadMe
-Total 0 (delta 0), reused 0 (delta 0)
-To https://github.com/reemessam/repo1.git
- * [new branch]      ReadMe -> ReadMe
-Branch 'ReadMe' set up to track remote branch 'ReadMe' from 'origin'.
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git push
-Everything up-to-date
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git add README.md
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git commit
-Aborting commit due to empty commit message.
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git commit -m'Adding README file'
-[ReadMe 8dcf970] Adding README file
- 1 file changed, 5 insertions(+), 2 deletions(-)
-
-jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
-$ git push
-Counting objects: 3, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 502 bytes | 502.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/reemessam/repo1.git
-   e031866..8dcf970  ReadMe -> ReadMe
+$ git commit -m"recreating README file"
+[ReadMe de74a4d] recreating README file
+ 1 file changed, 1 insertion(+), 5 deletions(-)
 
 jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
 $ git checkout master
@@ -931,19 +957,239 @@ Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 
 jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git merge ReadMe
+Updating 2712eb4..de74a4d
+Fast-forward
+ README.md | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 332 bytes | 332.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/reemessam/repo1.git
+   2712eb4..de74a4d  master -> master
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git branch -d ReadMe
+Deleted branch ReadMe (was de74a4d).
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
 $ git branch
-  ReadMe
 * master
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ echo "Project Title (sprint0)">README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ echo -e "Project Title (sprint0)\n Getting Started (3 files containing sections from the book)\n Autho                                                                    r (Reem Essam 37-8875)\n Acknowledgments(boo Chacon,Scott,and Ben Straub.Pro Git .Apress)">>README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git checkout -b ReadMe.md
+Switched to a new branch 'ReadMe.md'
+M       README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe.md)
+$ git add README,md
+fatal: pathspec 'README,md' did not match any files
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe.md)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe.md)
+$ git commit -m"editting README file"
+[ReadMe.md fd32329] editting README file
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe.md)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
 
 jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
 $ git merge ReadMe
-Updating e031866..8dcf970
-Fast-forward
- README.md | 7 +++++--
- 1 file changed, 5 insertions(+), 2 deletions(-)
+merge: ReadMe - not something we can merge
+
+Did you mean this?
+        origin/ReadMe
 
 jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
-$ git branch
-  ReadMe
-* master
+$ git reset
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        repo1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git branch -d ReadMe.md
+error: The branch 'ReadMe.md' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D ReadMe.md'.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git branch -D ReadMe.md
+Deleted branch ReadMe.md (was fd32329).
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git checkout -b ReadMe
+Switched to a new branch 'ReadMe'
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git add README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git commit -m"editting README file"
+On branch ReadMe
+Untracked files:
+        repo1/
+
+nothing added to commit but untracked files present
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git merge ReadMe
+Already up to date.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git push
+Everything up-to-date
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ echo -e "Project Title (sprint0)\n Getting Started (3 files containing sections from the book)\n Author (Reem Essam 37-8875)\n Acknowledgments(boo Chacon,Scott,and Ben Straub.Pro Git .Apress)">README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git checkout ReadMe
+Switched to branch 'ReadMe'
+M       README.md
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git log
+commit de74a4dd1fdeddf26005e3114d7844c7227ee3f4 (HEAD -> ReadMe, origin/master, origin/HEAD, master)
+Author: reem <reem.essam@gmail.com>
+Date:   Mon Feb 12 21:08:33 2018 +0200
+
+    recreating README file
+
+commit 2712eb44ddcc20bb38fa6917485baac12ecfa586
+Author: reem <reem.essam@gmail.com>
+Date:   Sun Feb 11 20:38:21 2018 +0200
+
+    commands file
+
+commit 8dcf970d699e9412ec9e48d1a28acb166a5a8b3b (origin/ReadMe)
+Author: reem <reem.essam@gmail.com>
+Date:   Sun Feb 11 20:31:10 2018 +0200
+
+    Adding README file
+
+commit e0318669eb2ef8d577283576da7455ebba79c23c
+Author: reem <reem.essam@gmail.com>
+Date:   Sun Feb 11 20:08:27 2018 +0200
+
+    Adding 3 files
+
+commit 0e1f85e221355f642f9587fca6c29418b1d7d8aa
+Author: reemessam <36365711+reemessam@users.noreply.github.com>
+Date:   Sun Feb 11 16:09:04 2018 +0200
+
+    Delete section 1.1
+
+commit 3752c3856f795d034e7491c44fdca292ab0003c2
+Author: reemessam <36365711+reemessam@users.noreply.github.com>
+Date:   Sun Feb 11 15:54:31 2018 +0200
+
+    create section 1.1
+
+    Getting Started - About Version Control from
+    book
+
+commit e2eb066263fd85f3cca6315fd0412d1a88ab8351
+Author: reemessam <36365711+reemessam@users.noreply.github.com>
+Date:   Sun Feb 11 15:35:15 2018 +0200
+
+    Initial commit
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git status
+On branch ReadMe
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        repo1/
+
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git commit -m "editting README file"
+[ReadMe 8791163] editting README file
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git status
+On branch ReadMe
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        repo1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (ReadMe)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git merge ReadMe
+Updating de74a4d..8791163
+Fast-forward
+ README.md | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 408 bytes | 408.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/reemessam/repo1.git
+   de74a4d..8791163  master -> master
+
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git add AllMyCommands.txt
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git commit -m'commands file'
+jack of all trade@jackofalltrade MINGW64 /d/6th Semester/Software Engineering/PA/repo1 (master)
+$ git push
+
+
+
 
